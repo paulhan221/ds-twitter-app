@@ -20,11 +20,9 @@ class TweetsController extends Controller {
 
   	$client->addSubscriber($auth);
 
-    $response = $client->get('search/tweets.json?q=@dosomething')->send();
+    $response = $client->get('search/tweets.json?q=@dosomething&result_type=popular')->send();
 
-    $tweets = array_fetch($response->json()['statuses'],'text');
-
-
+    $tweets = $response->json()['statuses'];
 
 		return view('tweets.index', compact('tweets'));
 	}
