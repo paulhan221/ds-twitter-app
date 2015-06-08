@@ -13,23 +13,25 @@
 
 // Route::get('/', 'WelcomeController@index');
 
-Route::get('/', function()
-{
-    $client = new \Guzzle\Service\Client('https://api.twitter.com/1.1');
+	Route::get('/tweets', 'TweetsController@index');
 
-    $auth = new \Guzzle\PLugin\Oauth\OauthPLugin([
-			'consumer_key'        => getenv('TWITTER_CONSUMER_KEY'),
-			'consumer_secret'     => getenv('TWITTER_CONSUMER_SECRET'),
-			'token'        => getenv('TWITTER_ACCESS_TOKEN'),
-			'token_secret' => getenv('TWITTER_ACCESS_TOKEN_SECRET')
-  	]);
+// Route::get('/', function()
+// {
+//     $client = new \Guzzle\Service\Client('https://api.twitter.com/1.1');
 
-  	$client->addSubscriber($auth);
+//     $auth = new \Guzzle\PLugin\Oauth\OauthPLugin([
+// 			'consumer_key'        => getenv('TWITTER_CONSUMER_KEY'),
+// 			'consumer_secret'     => getenv('TWITTER_CONSUMER_SECRET'),
+// 			'token'        => getenv('TWITTER_ACCESS_TOKEN'),
+// 			'token_secret' => getenv('TWITTER_ACCESS_TOKEN_SECRET')
+//   	]);
 
-    $response = $client->get('search/tweets.json?q=@dosomething')->send();
+//   	$client->addSubscriber($auth);
 
-    dd($response->json());
-});
+//     $response = $client->get('search/tweets.json?q=@dosomething')->send();
+
+//     dd($response->json());
+// });
 
 // Route::get('home', 'HomeController@index');
 
