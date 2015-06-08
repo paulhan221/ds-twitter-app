@@ -13,25 +13,27 @@
 
 // Route::get('/', 'WelcomeController@index');
 
-Route::get('/users/{username}', function($username)
+Route::get('/', function()
 {
-    $client = new \Guzzle\Service\Client('https://api.github.com/');
+    $client = new \Guzzle\Service\Client('https://api.twitter.com/1.1');
 
     $auth = new \Guzzle\PLugin\Oauth\OauthPLugin([
-    			'CONSUMER_KEY'        => getenv('TWITTER_CONSUMER_KEY'),
-	'CONSUMER_SECRET'     => getenv('TWITTER_CONSUMER_SECRET'),
-	'ACCESS_TOKEN'        => getenv('TWITTER_ACCESS_TOKEN'),
-	'ACCESS_TOKEN_SECRET' => getenv('TWITTER_ACCESS_TOKEN_SECRET'),
-    	]);
+			'consumer_key'        => getenv('TWITTER_CONSUMER_KEY'),
+			'consumer_secret'     => getenv('TWITTER_CONSUMER_SECRET'),
+			'token'        => getenv('TWITTER_ACCESS_TOKEN'),
+			'token_secret' => getenv('TWITTER_ACCESS_TOKEN_SECRET')
+  	]);
 
-    $response = $client->get("users/$username")->send();
+  	$client->addSubscriber($auth);
+
+    $response = $client->get('search/tweets.json?q=@dosomething')->send();
 
     dd($response->json());
 });
 
-Route::get('home', 'HomeController@index');
+// Route::get('home', 'HomeController@index');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+// Route::controllers([
+// 	'auth' => 'Auth\AuthController',
+// 	'password' => 'Auth\PasswordController',
+// ]);
