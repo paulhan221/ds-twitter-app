@@ -11,7 +11,23 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+// Route::get('/', 'WelcomeController@index');
+
+Route::get('/users/{username}', function($username)
+{
+    $client = new \Guzzle\Service\Client('https://api.github.com/');
+
+    $auth = new \Guzzle\PLugin\Oauth\OauthPLugin([
+    			'CONSUMER_KEY'        => getenv('TWITTER_CONSUMER_KEY'),
+	'CONSUMER_SECRET'     => getenv('TWITTER_CONSUMER_SECRET'),
+	'ACCESS_TOKEN'        => getenv('TWITTER_ACCESS_TOKEN'),
+	'ACCESS_TOKEN_SECRET' => getenv('TWITTER_ACCESS_TOKEN_SECRET'),
+    	]);
+
+    $response = $client->get("users/$username")->send();
+
+    dd($response->json());
+});
 
 Route::get('home', 'HomeController@index');
 
