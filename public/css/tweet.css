@@ -1,0 +1,145 @@
+@import "bourbon";
+
+$transition: all .4s;
+
+$thick-border: 2px solid;
+$thin-border: 1px solid;
+
+$ava-size: 80px;
+
+$brand-color: hsla(194, 85%, 56%, 1);
+$text-color: hsla(0, 0%, 7%, 1);
+$accent-color: hsla(0, 0%, 73%, 1);
+
+// Center & setup
+
+html {
+  display: table;
+  height: 100%;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: hsla(0, 0%, 92%, 1);
+  font-family: $helvetica;
+  color: $text-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// The rest
+
+.container {
+  position: relative;
+  border: $thick-border $accent-color;
+  padding: 25px 25px 25px 60px;
+  width: 660px;
+  background-color: white;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    border: $thick-border $brand-color;
+  }
+}
+
+.avatar {
+  float: left;
+  position: absolute;
+  left: 27px;
+  @include size($ava-size);
+  border-radius: 100px;
+  transition: $transition;
+  &:hover {
+    border-radius: 0px;
+  }
+}
+
+.tweet-time {
+  float: right;
+  color: $accent-color;
+  transition: $transition;
+  border-bottom: $thin-border white;
+  &:hover {
+    border-bottom: $thin-border $accent-color;
+  }
+}
+
+.push {
+  margin-left: 70px;
+}
+
+.user {
+  @include clearfix;
+}
+
+.name {
+  font-weight: bold;
+  transition: $transition;
+  border-bottom: $thin-border white;
+  &:hover {
+    border-bottom: $thin-border $text-color;
+  }
+}
+
+.username {
+  font-weight: normal;
+  color: $accent-color;
+  margin-left: 10px;
+  border-bottom: $thin-border white;
+}
+
+.tweet {
+  margin: 20px 0;
+  font-size: 2em; 
+}
+
+.at, .tag {
+  color: $brand-color;
+  transition: $transition;
+  border-bottom: $thick-border white;
+  &:hover {
+    border-bottom: $thick-border $brand-color;
+  }
+}
+
+// Thanks to Font Awesome!
+
+.fa {
+  color: $accent-color;
+  margin-right: 40px;
+  font-size: 1.5em;
+  transition: $transition;
+}
+
+.fa-reply:hover {
+  color: $brand-color;
+}
+
+.fa-retweet:hover {
+  color: hsla(101, 85%, 35%, 1);
+}
+
+.fa-star:hover {
+  color: hsla(45, 85%, 50%, 1);
+}
+
+.fa-ellipsis-h:hover {
+  color: $text-color;
+}
+
+.fa-eye {
+  float: right;
+  margin-right: 0;
+  &:hover {
+    color: $brand-color;
+  }
+}
+
+.icon-number {
+  font-size: 0.66em;
+  font-family: $helvetica;
+}
