@@ -15,6 +15,11 @@
 
 	Route::get('/tweets', 'TweetsController@index');
 
+	// Route::get('/', function(){
+	// 	Cache::put('foo', 'bar', 10);
+	// 	return Cache::get('foo');
+	// });
+
 // Route::get('/', function()
 // {
 //     $client = new \Guzzle\Service\Client('https://api.twitter.com/1.1');
