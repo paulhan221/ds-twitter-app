@@ -21,16 +21,23 @@ class TweetsController extends Controller {
 	{
 		$tweets = $this->twitter->update();
 
-		$client = new \Guzzle\Service\Client('http://lobby.dosomething.org/');
+		$client = new \Guzzle\Service\Client('http://lobby.dosomething.org/services/social');
 
-    $res = $client->post('services/social', [
-    	'headers' => [
-    		'Content-Type' => 'application/json',
-    	],
-    	'body' => json_encode($tweets)
-    ]);
+    // $res = $client->post('services/social', [
+    // 	'headers' => [
+    // 		'Content-Type' => 'application/json',
+    // 	],
+    // 	'body' => json_encode($tweets)
+    // ]);
 
-    // dd($res->getBody());
+    $request = $client->post('http://lobby.dosomething.org/services/social',array(
+     'content-type' => 'application/json'
+			       ),array());
+			$request->setBody(json_encode($tweets)); #set body!
+			$response = $request->send();
+
+			dd($response);
+			return $response;
 
 		return view('tweets.index', compact('tweets'));
 	}
