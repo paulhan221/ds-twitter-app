@@ -10,18 +10,18 @@ use App\Services\InstagramAPI;
 
 
 class InstagramController extends Controller {
-	protected $instagram;
+	protected $post;
 
-	public function __construct(InstagramAPI $instagram)
+	public function __construct(InstagramAPI $post)
 	{
-		$this->instagram = $instagram;
+		$this->post = $post;
 	}
 
 	public function index()
 	{
-		$instagram = $this->instagram->getInstagram("apathysucks");
+		$instagrams = $this->post->getInstagram("apathysucks");
 
-			dd($instagram->json());
+		return view('instagram.index', compact('instagrams'));
 	}
 
 }
