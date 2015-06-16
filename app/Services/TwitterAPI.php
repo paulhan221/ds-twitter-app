@@ -13,25 +13,24 @@ class TwitterAPI {
         'token_secret'        => getenv('TWITTER_ACCESS_TOKEN_SECRET')
     ]);
 
-  $client->addSubscriber($auth);
+    $client->addSubscriber($auth);
 
-  $response = $client->get('search/tweets.json?q=@dosomething&result_type=popular')->send();
+    $response = $client->get('search/tweets.json?q=@dosomething&result_type=popular')->send();
 
-  $tweets = $response->json()['statuses'];
+    $tweets = $response->json()['statuses'];
 
-  $twts = [];
+    $final_tweets = [];
 
-  $final_tweets = [];
-
-  foreach ($tweets as $tweet) {
-    $twts['name'] = $tweet["user"]["name"];
-    $twts['screen_name'] = $tweet["user"]["screen_name"];
-    $twts['profile_pic'] = $tweet["user"]["profile_image_url"];
-    $twts['location'] = $tweet["user"]["location"];
-    $twts['text'] = $tweet["text"];
-    $twts['tweet_time'] = preg_replace('/\+\S+/', '', $tweet["created_at"]);
-    array_push($final_tweets, $twts);
-  }   
+    foreach ($tweets as $tweet) {
+      $twts = [];
+      $twts['name'] = $tweet["user"]["name"];
+      $twts['screen_name'] = $tweet["user"]["screen_name"];
+      $twts['profile_pic'] = $tweet["user"]["profile_image_url"];
+      $twts['location'] = $tweet["user"]["location"];
+      $twts['text'] = $tweet["text"];
+      $twts['tweet_time'] = preg_replace('/\+\S+/', '', $tweet["created_at"]);
+      array_push($final_tweets, $twts);
+    }   
 
     return $final_tweets;
   

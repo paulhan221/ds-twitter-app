@@ -12,7 +12,7 @@ class TweetsController extends Controller {
 
 	protected $twitter;
 
-	public function __construct(TwitterAPI $twitter) 
+	public function __construct(TwitterAPI $twitter)
 	{
 		$this->twitter = $twitter;
 	}
@@ -20,7 +20,7 @@ class TweetsController extends Controller {
 	public function index()
 	{
 		$tweets = $this->twitter->update();
-
+		
 		$client = new \Guzzle\Service\Client('http://lobby.dosomething.org/services/social');
 
     // $res = $client->post('services/social', [

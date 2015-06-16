@@ -14,6 +14,8 @@
 // Route::get('/', 'WelcomeController@index');
 
 	Route::get('/tweets', 'TweetsController@index');
+	Route::get('/instagrams', 'InstagramController@index');
+
 
 	// Route::get('/', function(){
 	// 	Cache::put('foo', 'bar', 10);
