@@ -1,0 +1,26 @@
+.pics {
+	width: 75%;
+}
+
+.vids {
+	width: 75%;
+	margin-left: 13%;
+}
+
+.caption {
+	text-align: center;
+	word-wrap: break-word;
+}
+
+.instagram-container {
+	margin: 2%;
+}
+
+.profile-pic {
+  float: left;
+  position: relative;
+  left: 11px;
+  width: 45px;
+  border-radius: 100px;
+  transition: all 0.4s;
+}
