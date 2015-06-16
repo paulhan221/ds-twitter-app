@@ -9,8 +9,8 @@ class TwitterAPI {
     $auth = new \Guzzle\PLugin\Oauth\OauthPLugin([
         'consumer_key'        => getenv('TWITTER_CONSUMER_KEY'),
         'consumer_secret'     => getenv('TWITTER_CONSUMER_SECRET'),
-        'token'                     => getenv('TWITTER_ACCESS_TOKEN'),
-        'token_secret'              => getenv('TWITTER_ACCESS_TOKEN_SECRET')
+        'token'               => getenv('TWITTER_ACCESS_TOKEN'),
+        'token_secret'        => getenv('TWITTER_ACCESS_TOKEN_SECRET')
     ]);
 
   $client->addSubscriber($auth);
@@ -33,7 +33,7 @@ class TwitterAPI {
     array_push($final_tweets, $twts);
   }   
 
-  return $final_tweets;
+    return $final_tweets;
   
   }
 

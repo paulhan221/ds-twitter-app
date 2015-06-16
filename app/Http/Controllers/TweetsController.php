@@ -36,8 +36,8 @@ class TweetsController extends Controller {
 			$request->setBody(json_encode($tweets)); #set body!
 			$response = $request->send();
 
-			dd($response);
-			return $response;
+			// dd($response);
+			// return $response;
 
 		return view('tweets.index', compact('tweets'));
 	}
