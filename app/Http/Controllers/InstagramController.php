@@ -19,9 +19,20 @@ class InstagramController extends Controller {
 
 	public function index()
 	{
-		$instagrams = $this->post->getInstagram("apathysucks");
 
-		return view('instagram.index', compact('instagrams'));
+		return view('instagram.index');
 	}
+
+	public function show($hashtag)
+	{
+
+		$instagrams = $this->post->getInstagram($hashtag);
+
+		return view('instagram.show', compact('instagrams'));
+	}
+
+
+
+
 
 }
