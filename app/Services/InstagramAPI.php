@@ -26,7 +26,6 @@ class InstagramAPI {
         $array["post_link"] = $instagram["link"];
       array_push($final_instagrams, $array);
     }
-
     return $final_instagrams;
   }
 }

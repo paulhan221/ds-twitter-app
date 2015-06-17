@@ -1,9 +1,11 @@
 @extends('app')
 
 @section('content')
-  <h1> DoSomething.org Hashtags for Instagram</h1>
+  <img width="100" height="100" src="{{ asset('/images/dosomething.png')}}">
+  <h1><a href="https://www.dosomething.org">Dosomething.org</a> Campaigns Hastags</h1>
+  <!-- <link href="{{ asset('/css/instagram.css') }}" rel="stylesheet"> -->
 
-  <h3>Hashtags</h3>
+  
   <ul>
     <li><a href="/instagrams/dosomethingorg">#DoSomethingOrg</a></li> 
     <li><a href="/instagrams/apathysucks">#ApathySucks</a></li> 
