@@ -61,6 +61,14 @@
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js"></script>
+	<script>
+		$('.instagram-container').imagesLoaded( function(){
+	    $('.instagram-container').isotope({
+	      itemSelector : '.item'
+	    });
+	  });	  
+	</script>
 
 </body>
 </html>
