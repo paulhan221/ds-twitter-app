@@ -2,10 +2,10 @@
 
 @section('content')
   <div class="instagram-container">
-    <div class="row">
+    <!-- <div class="row"> -->
       @foreach($instagrams as $instagram)
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
+        <!-- <div class="col-sm-6 col-md-4"> -->
+          <div class="grid-item thumbnail">
               @if(isset($instagram["videos"]))
                 <video controls src="{{ $instagram["videos"]}}" class="vids">Your Browser does not support the video tag</video>
               @else
@@ -19,8 +19,9 @@
               </div>
               {{ $instagram["likes_count"]}} likes
             </div>
-          </div>
+          <!-- </div> -->
       @endforeach
     </div>
-  </div>
+  <!-- </div> -->
+
 @stop
