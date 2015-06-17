@@ -11,7 +11,6 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-	<!-- <link href="{{ asset('/css/tweet.css') }}" rel="stylesheet"> -->
 	<link href="{{ asset('/css/instagram.css') }}" rel="stylesheet">
 
 

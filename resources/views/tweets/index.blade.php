@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-
+<link href="{{ asset('/css/tweet.css') }}" rel="stylesheet">
 	<h1>Popular Tweets for @DoSomething</h1>
 
 	@foreach ($tweets as $tweet)
