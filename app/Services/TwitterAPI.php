@@ -21,6 +21,7 @@ class TwitterAPI {
 
     $final_tweets = [];
 
+
     foreach ($tweets as $tweet) {
       $twts = [];
       $twts['name'] = $tweet["user"]["name"];
