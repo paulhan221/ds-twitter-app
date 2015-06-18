@@ -27,7 +27,7 @@
 }
 
 
-.grid-item { 
+.grid-item {
 	width: 30%;
 	margin: 10px;
 	padding: 10px;
@@ -35,6 +35,10 @@
 
 .title {
 	text-align: center;
+}
+.instagram-feed{
+	position: absolute;
+	left: 278px;
 }
 
 nav {
@@ -49,6 +53,7 @@ nav {
   box-sizing: border-box;
   transition: transform .3s, left .3s;
   overflow: hidden;
+	z-index: 1;
 }
 
 nav a {
@@ -95,4 +100,3 @@ nav a {
 
 #tog:checked ~ nav {transform: rotate(0deg)}
 #tog:checked ~ #ham span {transform: rotate(-90deg)}
-

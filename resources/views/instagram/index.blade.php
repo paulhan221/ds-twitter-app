@@ -25,6 +25,8 @@
     <a class="hashtags">#NotBreakingNews</a>
     <a class="hashtags">#WeAreAble</a>
   </nav>
-  
+    <div class="instagram-feed">
+
+    </div>
 
 @stop
