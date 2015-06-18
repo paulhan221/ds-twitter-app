@@ -1,19 +1,15 @@
 @extends('app')
 
 @section('content')
-  <h1 class="title"><img width="100" height="100" src="{{ asset('/images/dosomething.png')}}">
-  <a href="https://www.dosomething.org">Dosomething.org</a> Campaigns Hastags</h1>
+  <h1 class="title"><img width="100" height="100" src="{{ asset('/images/dosomething.png')}}">DoSomething.org Instagram Feeds</h1>
   <!-- <link href="{{ asset('/css/instagram.css') }}" rel="stylesheet"> -->
 
   <input type="checkbox" id="tog" checked>
   <label for="tog" id="ham">
-    <span></span>
-    <span></span>
-    <span></span>
   </label>
 
   <nav>
-    <h2 style = "padding-left: 80px">Hashtags</h2>
+    <h2 style = "padding-left: 50px">Hashtags</h2>
     <a class="hashtags">#DoSomethingOrg</a>
     <a class="hashtags">#ApathySucks</a>
     <a class="hashtags">#1in3ofus</a>
@@ -26,5 +22,5 @@
     <a class="hashtags">#WeAreAble</a>
   </nav>
   
-
+  <div class="instagram-feed"></div>
 @stop
