@@ -46,7 +46,7 @@ nav {
   position: fixed;
   top: 0;
   transform: translateX(-278px);
-  width: 278px;
+  width: 15%;
   height: 730px;
   padding-top: 20px;
   margin-top: -10px;
@@ -67,6 +67,7 @@ nav a {
   transition: background .3s;
   position: relative;
 }
+
 #tog {display: none}
 
 #ham {

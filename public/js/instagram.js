@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  var input;
+
   $('.hashtags').click(function(){
     var input = $(this).text().slice(1);
     $.get("/instagrams/"+ input, function(data, response){
@@ -17,14 +17,4 @@ $( document ).ready(function() {
     }
   })
 
-
-
-  });
-  // var $container = $('.instagram-container');
-  //   $container.imagesLoaded( function() {
-  //     $('.instagram-container').masonry({
-  //     // options
-  //     itemSelector: '.thumbnail',
-  //     columnWidth: 10
-  //   });
-  // });
+});
