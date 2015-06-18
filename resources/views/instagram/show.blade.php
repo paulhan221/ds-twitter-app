@@ -1,6 +1,3 @@
-@extends('app')
-
-@section('content')
   <div class="instagram-container">
     <!-- <div class="row"> -->
       @foreach($instagrams as $instagram)
@@ -23,5 +20,3 @@
       @endforeach
     </div>
   <!-- </div> -->
-
-@stop

@@ -14,15 +14,17 @@
 
   <nav>
     <h2 style = "padding-left: 80px">Hashtags</h2>
-    <a href="/instagrams/dosomethingorg">#DoSomethingOrg</a>
-    <a href="/instagrams/apathysucks">#ApathySucks</a>
-    <a href="/instagrams/1in3ofus">#1in3ofus</a>
-    <a href="/instagrams/miccheckracism">#MicCheckRacism</a>
-    <a href="/instagrams/suspended4what">#Suspended4What</a>
-    <a href="/instagrams/thumbwars">#ThumbWars</a>
-    <a href="/instagrams/comebackclothes">#ComeBackClothes</a>
-    <a href="/instagrams/teensforjeans">#TeensForJeans</a>
-    <a href="/instagrams/notbreakingnews">#NotBreakingNews</a>
-    <a href="/instagrams/weareable">#WeAreAble</a>
+    <a class="hashtags">#DoSomethingOrg</a>
+    <a class="hashtags">#ApathySucks</a>
+    <a class="hashtags">#1in3ofus</a>
+    <a class="hashtags">#MicCheckRacism</a>
+    <a class="hashtags">#Suspended4What</a>
+    <a class="hashtags">#ThumbWars</a>
+    <a class="hashtags">#ComeBackClothes</a>
+    <a class="hashtags">#TeensForJeans</a>
+    <a class="hashtags">#NotBreakingNews</a>
+    <a class="hashtags">#WeAreAble</a>
   </nav>
+  
+
 @stop
