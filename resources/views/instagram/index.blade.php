@@ -6,6 +6,9 @@
 
   <input type="checkbox" id="tog" checked>
   <label for="tog" id="ham">
+    <span></span>
+    <span></span>
+    <span></span>
   </label>
 
   <nav>
