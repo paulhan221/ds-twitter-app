@@ -24,8 +24,8 @@
     <a class="hashtags">#NotBreakingNews</a>
     <a class="hashtags">#WeAreAble</a>
   </nav>
-  
-  <div class="instagram-container">
+
+  <div class="">
     <div class="instagram-feed">
       @foreach($instagrams as $instagram)
         <div class="grid-item thumbnail">

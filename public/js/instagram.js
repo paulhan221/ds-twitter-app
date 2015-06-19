@@ -31,13 +31,17 @@ $( document ).ready(function() {
   $("#tog").click(function(){
     var toggleValue = document.getElementById("tog").checked;
     if(toggleValue == true){
-      $(".instagram-feed").animate({left: '20%'});
+      $(".instagram-feed").css("max-width","80%");
+      $(".instagram-feed").animate({left: '15%'}).masonry('destroy');
+      $('.instagram-feed').masonry({
+        columnwidth: 10
+      })
     }else{
-      $(".instagram-feed").animate({left: '0px'});
+      $(".instagram-feed").animate({left: '0%'}).masonry('destroy');
+      $(".instagram-feed").css({"max-width" : "100%", "margin-left" : "4%"});
+      $('.instagram-feed').masonry();
     }
   });
 
 
 });
-
-
