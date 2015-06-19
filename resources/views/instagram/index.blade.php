@@ -10,20 +10,24 @@
     <span></span>
     <span></span>
   </label>
+    <nav>
+      <h2 style = "padding-left: 50px">Hashtags</h2>
 
-  <nav>
-    <h2 style = "padding-left: 50px">Hashtags</h2>
-    <a class="hashtags">#DoSomethingOrg</a>
-    <a class="hashtags">#ApathySucks</a>
-    <a class="hashtags">#1in3ofus</a>
-    <a class="hashtags">#MicCheckRacism</a>
-    <a class="hashtags">#Suspended4What</a>
-    <a class="hashtags">#ThumbWars</a>
-    <a class="hashtags">#ComeBackClothes</a>
-    <a class="hashtags">#TeensForJeans</a>
-    <a class="hashtags">#NotBreakingNews</a>
-    <a class="hashtags">#WeAreAble</a>
-  </nav>
+        <center><input type="text" id="hashtag-input"></center>
+
+      <a class="hashtags btn btn-3">#DoSomethingOrg</a>
+      <a class="hashtags btn btn-3">#ApathySucks</a>
+      <a class="hashtags btn btn-3">#1in3ofus</a>
+      <a class="hashtags btn btn-3">#MicCheckRacism</a>
+      <a class="hashtags btn btn-3">#Suspended4What</a>
+      <a class="hashtags btn btn-3">#ThumbWars</a>
+      <a class="hashtags btn btn-3">#ComeBackClothes</a>
+      <a class="hashtags btn btn-3">#TeensForJeans</a>
+      <a class="hashtags btn btn-3">#NotBreakingNews</a>
+      <a class="hashtags btn btn-3">#WeAreAble</a>
+
+      </div>
+    </nav>
 
   <div class="">
     <div class="instagram-feed">
