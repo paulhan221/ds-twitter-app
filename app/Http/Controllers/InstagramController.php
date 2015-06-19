@@ -10,6 +10,7 @@ use App\Services\InstagramAPI;
 
 
 class InstagramController extends Controller {
+
 	protected $post;
 
 	public function __construct(InstagramAPI $post)
@@ -19,8 +20,10 @@ class InstagramController extends Controller {
 
 	public function index()
 	{
+		$instagrams = $this->post->getInstagram("apathysucks");
 
-		return view('instagram.index');
+		return view('instagram.index', compact('instagrams'));
+
 	}
 
 	public function show($hashtag)

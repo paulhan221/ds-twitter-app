@@ -12,11 +12,6 @@
 	word-wrap: break-word;
 }
 
-.instagram-container {
-	margin: 2%;
-
-}
-
 .profile-pic {
   float: left;
   position: relative;
@@ -26,9 +21,9 @@
   transition: all 0.4s;
 }
 
-
 .grid-item {
-	width: 27%;
+  position: relative;
+	width: 30%;
 	margin: 10px;
 	padding: 10px;
 }
@@ -36,9 +31,14 @@
 .title {
 	text-align: center;
 }
+
 .instagram-feed{
-	position: absolute;
-	left: 278px;
+  position: relative;
+  left: 278px;
+}
+
+.instagram-container {
+	max-width: 80%;
 }
 
 nav {
@@ -66,6 +66,7 @@ nav a {
   border-bottom: 1px solid indianred;
   transition: background .3s;
   position: relative;
+  word-wrap: break-word;
 }
 
 #tog {display: none}
