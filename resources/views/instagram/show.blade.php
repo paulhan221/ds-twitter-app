@@ -19,4 +19,5 @@
       </div>
       {{ $instagram["likes_count"]}} likes
   </div>
+  
 @endforeach
