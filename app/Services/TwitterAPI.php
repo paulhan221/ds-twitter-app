@@ -13,15 +13,14 @@ class TwitterAPI {
         'token_secret'        => getenv('TWITTER_ACCESS_TOKEN_SECRET')
     ]);
 
-  $client->addSubscriber($auth);
+    $client->addSubscriber($auth);
 
-  $response = $client->get('search/tweets.json?q=@dosomething&result_type=popular')->send();
+    $response = $client->get('search/tweets.json?q=@dosomething&result_type=popular')->send();
 
-  $tweets = $response->json()['statuses'];
+    $tweets = $response->json()['statuses'];
 
-  $twts = [];
+    $final_tweets = [];
 
-  $final_tweets = [];
 
   foreach ($tweets as $tweet) {
     $twts['name'] = $tweet["user"]["name"];
@@ -34,6 +33,7 @@ class TwitterAPI {
   }
 
   return $final_tweets;
+
 
   }
 
