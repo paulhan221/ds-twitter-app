@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class hashtag extends Model {
+class Hashtag extends Model {
 
 	protected $fillable = [
 		'title'

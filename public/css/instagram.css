@@ -50,7 +50,7 @@ nav {
   margin-top: -10px;
   box-sizing: border-box;
   transition: transform .3s, left .3s;
-  overflow: hidden;
+  overflow: scroll;
 	z-index: 1;
 }
 
