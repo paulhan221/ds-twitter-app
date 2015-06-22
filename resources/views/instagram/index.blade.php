@@ -13,7 +13,7 @@
     <nav>
       <h2 style = "padding-left: 50px">Hashtags</h2>
 
-      {!! Form::open(array('action' => 'HashtagsController@create')) !!}
+      {!! Form::open(['url' => '/hashtags']) !!}
         {!! Form::text('title', null) !!}
       {!! Form::close() !!}
 

@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Hashtag;
 use Illuminate\Http\Request;
 
 class HashtagsController extends Controller {
@@ -24,7 +24,7 @@ class HashtagsController extends Controller {
 	 */
 	public function create()
 	{
-		//
+
 	}
 
 	/**
@@ -32,9 +32,13 @@ class HashtagsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$hashtag = new Hashtag($request->all());
+
+		$hashtag->save();
+		
+		return redirect('/instagrams');
 	}
 
 	/**
