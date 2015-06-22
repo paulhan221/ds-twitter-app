@@ -37,7 +37,7 @@ class HashtagsController extends Controller {
 		$hashtag = new Hashtag($request->all());
 
 		$hashtag->save();
-		
+
 		return redirect('/instagrams');
 	}
 
@@ -82,7 +82,8 @@ class HashtagsController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		Hashtag::destroy($id);
+		return redirect('/instagrams');
 	}
 
 }

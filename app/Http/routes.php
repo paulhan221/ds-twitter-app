@@ -17,6 +17,7 @@
 	Route::get('/instagrams', 'InstagramController@index');
 	Route::get('/instagrams/{hashtag}', 'InstagramController@show');
 	Route::post('/hashtags','HashtagsController@store');
+	Route::delete('/hashtags/{id}','HashtagsController@destroy');
 
 
 
