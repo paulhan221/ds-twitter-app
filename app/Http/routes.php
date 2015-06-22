@@ -16,6 +16,8 @@
 	Route::get('/tweets', 'TweetsController@index');
 	Route::get('/instagrams', 'InstagramController@index');
 	Route::get('/instagrams/{hashtag}', 'InstagramController@show');
+	Route::post('/hashtags','HashtagsController@create');
+
 
 
 	// Route::get('/', function(){

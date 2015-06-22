@@ -43,29 +43,29 @@ $( document ).ready(function() {
     }
   });
 
-  $('#hashtag-input').keypress(function (e) {
-   var key = e.which;
-   if(key == 13)  // the enter key code
-    {
-      event.preventDefault();
-      var hashtag = $("#hashtag-input").val();
-      
-      $.ajax({
-      type: "GET",
-      url: "/instagrams/" + hashtag,
-      dataType: "html",
-        success: function(data) {
-         $container.html(data).masonry('destroy')
-        }
-      }).done(function(){
-         $container.imagesLoaded(function(){
-           $container.masonry({
-             columnWidth: 10
-           })
-         });
-      });
-    }
-  });
+  // $('#hashtag-input').keypress(function (e) {
+  //  var key = e.which;
+  //  if(key == 13)  // the enter key code
+  //   {
+  //     event.preventDefault();
+  //     var hashtag = $("#hashtag-input").val();
+  //
+  //     $.ajax({
+  //     type: "GET",
+  //     url: "/instagrams/" + hashtag,
+  //     dataType: "html",
+  //       success: function(data) {
+  //        $container.html(data).masonry('destroy')
+  //       }
+  //     }).done(function(){
+  //        $container.imagesLoaded(function(){
+  //          $container.masonry({
+  //            columnWidth: 10
+  //          })
+  //        });
+  //     });
+  //   }
+  // });
 
 
 });

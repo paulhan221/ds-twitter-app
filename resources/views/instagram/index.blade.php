@@ -13,7 +13,9 @@
     <nav>
       <h2 style = "padding-left: 50px">Hashtags</h2>
 
-        <center><input type="text" id="hashtag-input"></center>
+      {!! Form::open(array('action' => 'HashtagsController@create')) !!}
+        {!! Form::text('title', null) !!}
+      {!! Form::close() !!}
 
       <a class="hashtags btn btn-3">#DoSomethingOrg</a>
       <a class="hashtags btn btn-3">#ApathySucks</a>
