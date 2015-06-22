@@ -15,27 +15,25 @@
 
       {!! Form::open(['url' => '/hashtags']) !!}
         {!! Form::text('title', null) !!}
-        {!! Form::submit('add') !!}
+        {!! Form::button('<i class="fa fa-plus"></i>',['type'=>'submit']) !!}
       {!! Form::close() !!}
+      <ul class="navigation">
 
       @foreach($hashtags as $hashtag)
-        <a class="hashtags btn btn-3">#{{ $hashtag['original']['title'] }}</a>
+        <div class="btn">
+        <a class="hashtags">#{{ $hashtag['original']['title'] }}</a>
+        <div class="delete-button">
         {!! Form::open(['method'=> 'DELETE', 'url'=>'/hashtags/'.$hashtag->id]) !!}
-          {!! Form::submit('Delete') !!}
+          {!! Form::button('<i class="fa fa-trash-o"></i>', ['type' => 'submit']) !!}
         {!! Form::close() !!}
+        </div>
+        </div>
+
       @endforeach
-      <a class="hashtags btn btn-3">#DoSomethingOrg</a>
-      <a class="hashtags btn btn-3">#ApathySucks</a>
-      <a class="hashtags btn btn-3">#1in3ofus</a>
-      <a class="hashtags btn btn-3">#MicCheckRacism</a>
-      <a class="hashtags btn btn-3">#Suspended4What</a>
-      <a class="hashtags btn btn-3">#ThumbWars</a>
-      <a class="hashtags btn btn-3">#ComeBackClothes</a>
-      <a class="hashtags btn btn-3">#TeensForJeans</a>
-      <a class="hashtags btn btn-3">#NotBreakingNews</a>
-      <a class="hashtags btn btn-3">#WeAreAble</a>
 
       </div>
+
+      </ul>
     </nav>
 
   <div class="">
