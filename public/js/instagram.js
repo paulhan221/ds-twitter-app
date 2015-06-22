@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
   // variables
-  var $hashtags = $('nav').children('a');
+  var $hashtags = $('.hashtags');
   var $hashtagsCount = $hashtags.size();
   var $container = $('.instagram-feed');
   var $time = 5000;
@@ -66,32 +66,7 @@ $( document ).ready(function() {
   //   $(element).trigger('click').delay(5000);
   // }
 
-  setInterval(function(){clickHashtags();}, ($time * ($hashtagsCount)));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  setInterval(function(){clickHashtags();}, 1000);
 
 
   // $('#hashtag-input').keypress(function (e) {
