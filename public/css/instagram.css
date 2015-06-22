@@ -40,7 +40,7 @@
 }
 
 nav {
-  background: crimson;
+  background:  #4e2b63;
   position: fixed;
   top: 0;
   transform: translateX(-278px);
@@ -68,7 +68,7 @@ nav a {
 #tog {display: none}
 
 #ham {
-  background: crimson;
+  background: #4e2b63;
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -177,5 +177,9 @@ button {
 
 .hashtags{
 	display: inline-block;
-  
+
+}
+
+h2{
+	color: #FCD116;
 }
