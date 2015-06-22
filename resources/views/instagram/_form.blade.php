@@ -1,0 +1,1 @@
+<center>{!! Form::text('hashtag', "#hashtag", ["id" => 'input-hashtag']) !!}</center>

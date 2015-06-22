@@ -59,7 +59,6 @@ nav a {
   color: lightsalmon;
   display: block;
   text-align: center;
-  padding: 20px;
   width: 95%;
   border-bottom: 1px solid indianred;
   transition: background .3s;
@@ -108,7 +107,7 @@ nav a {
   font-size: 12px;
   font-weight: 400;
   line-height: 25px;
-  margin: 0 auto 2em;
+  /*margin: 0 auto 2em;*/
   max-width: 160px;
   position: relative;
   text-decoration: none;

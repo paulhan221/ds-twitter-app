@@ -1,13 +1,10 @@
 <?php namespace App\Http\Controllers;
 
+use App\Hashtag;
 use App\Http\Requests;
-
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
-
 use App\Services\InstagramAPI;
-
 
 class InstagramController extends Controller {
 
@@ -22,7 +19,9 @@ class InstagramController extends Controller {
 	{
 		$instagrams = $this->post->getInstagram("apathysucks");
 
-		return view('instagram.index', compact('instagrams'));
+		$hashtags = Hashtag::all();
+
+		return view('instagram.index', compact('instagrams', 'hashtags'));
 
 	}
 

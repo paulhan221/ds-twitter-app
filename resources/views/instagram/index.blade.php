@@ -17,6 +17,9 @@
         {!! Form::text('title', null) !!}
       {!! Form::close() !!}
 
+      @foreach($hashtags as $hashtag)
+        <a class="hashtags btn btn-3">#{{ $hashtag['original']['title'] }}</a>
+      @endforeach
       <a class="hashtags btn btn-3">#DoSomethingOrg</a>
       <a class="hashtags btn btn-3">#ApathySucks</a>
       <a class="hashtags btn btn-3">#1in3ofus</a>
