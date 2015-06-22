@@ -44,7 +44,7 @@ nav {
   position: fixed;
   top: 0;
   transform: translateX(-278px);
-  width: 17.5%;
+  width: 15%;
   height: 100%;
   padding-top: 20px;
   margin-top: -10px;
@@ -60,7 +60,6 @@ nav a {
   display: block;
   text-align: center;
   width: 95%;
-  border-bottom: 1px solid indianred;
   transition: background .3s;
   position: relative;
   word-wrap: break-word;
@@ -103,7 +102,7 @@ nav a {
 .btn {
   color: #fff;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   font-size: 12px;
   font-weight: 400;
   line-height: 25px;
@@ -159,7 +158,24 @@ nav a {
   transition: all 250ms linear;
 }
 
-.form{
+form{
 	position: relative;
 	text-align: center;
+	box-sizing: content-box;
+}
+
+button {
+	display: inline-block;
+	background: none;
+	border: 0px;
+}
+
+.delete-button{
+	display: inline-block;
+	right: 5px;
+}
+
+.hashtags{
+	display: inline-block;
+  
 }

@@ -19,7 +19,7 @@ class InstagramController extends Controller {
 	{
 		$instagrams = $this->post->getInstagram("apathysucks");
 
-		$hashtags = Hashtag::all();
+		$hashtags = Hashtag::orderBy('id', 'DESC')->get();
 
 		return view('instagram.index', compact('instagrams', 'hashtags'));
 
