@@ -3,6 +3,7 @@
 @section('content')
   <h1 class="title"><img width="100" height="100" src="{{ asset('/images/dosomething.png')}}">DoSomething.org Instagram Feeds</h1>
   <!-- <link href="{{ asset('/css/instagram.css') }}" rel="stylesheet"> -->
+  <h2 class="hashtagTitle"></h2>
 
   <input type="checkbox" id="tog" checked>
   <label for="tog" id="ham">

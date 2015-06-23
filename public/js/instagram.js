@@ -17,6 +17,9 @@ $( document ).ready(function() {
   $('.hashtags').click(function(){
    $container = $('.instagram-feed');
    var input = $(this).text().slice(1);
+   $(".hashtagTitle").html("");
+   $(".hashtagTitle").append("#"+input);
+
    $.ajax({
    type: "GET",
    url: "/instagrams/" + input,
