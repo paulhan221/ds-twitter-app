@@ -17,7 +17,10 @@
 					{{ $tweet["location"] }}</span></div>
 		    </div>
 		    
-		    <blockquote class="tweet"><span class="at"> </span>{{ $tweet["text"] }} <span class="tag">#tags</span></blockquote>
+		    <blockquote class="tweet">
+		    	<span class="at"> </span>{{ $tweet["text"] }}
+		    	<!-- <span class="tag">#tags</span> -->
+		    </blockquote>
 		    
 		  </div>
 		  

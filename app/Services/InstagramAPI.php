@@ -23,18 +23,25 @@ class InstagramAPI {
         $array["likes_count"] = $instagram["likes"]["count"];
         $array["caption"] = $instagram["caption"]["text"];
         $array["post_link"] = $instagram["link"];
-        $array["created_time"] = $instagram["created_time"];
-
-        // dd(date('m/d/Y', $instagram["created_time"]);
-        // $this->getDatePosted($instagram["created_time"]);
+        $array["time_interval"] = $this->timerFormat($instagram["created_time"], time());
       array_push($final_instagrams, $array);
     }
     return $final_instagrams;
   }
 
-  public function getDatePosted($date){
-    $timeNow = time();
-    $numDays = abs($date - $timeNow)/60/60/24;
-    dd($numDays);
-  }
+  public function timerFormat($start_time, $end_time, $std_format = false) {
+   $total_time = $end_time - $start_time;
+   $days       = floor($total_time /86400);
+   $results = "";
+   if($std_format == false)
+   {
+     if($days > 0) $results .= $days . (($days > 1)?" days ":" day ");
+   }
+   else
+   {
+     if($days > 0) $results = $days . (($days > 1)?" days ":" day ");
+     $results = sprintf("%s%02d:%02d:%02d",$results);
+   }
+   return $results;
+ }
 }

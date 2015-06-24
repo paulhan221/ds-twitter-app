@@ -195,3 +195,7 @@ h2{
 .hashtagTitle{
 	text-align: center;
 }
+
+.time-interval {
+    float:right;
+}

@@ -1,9 +1,9 @@
 @extends('app')
 
 @section('content')
-  <h1 class="title"><img width="100" height="100" src="{{ asset('/images/dosomething.png')}}">DoSomething.org Instagram Feeds</h1>
+  <h1 class="title"><img width="100" height="100" src="{{ asset('/images/dosomething.png')}}">Instagram Feeds</h1>
   <!-- <link href="{{ asset('/css/instagram.css') }}" rel="stylesheet"> -->
-  <h2 class="hashtagTitle"></h2>
+  <h2 class="hashtagTitle">#ApathySucks</h2>
 
   <input type="checkbox" id="tog" checked>
   <label for="tog" id="ham">
@@ -22,16 +22,14 @@
 
       @foreach($hashtags as $hashtag)
         <div class="btn">
-        <a class="hashtags">#{{ $hashtag['original']['title'] }}</a>
-        <div class="delete-button">
-        {!! Form::open(['method'=> 'DELETE', 'url'=>'/hashtags/'.$hashtag->id]) !!}
-          {!! Form::button('<i class="fa fa-trash-o"></i>', ['type' => 'submit']) !!}
-        {!! Form::close() !!}
+          <a class="hashtags">#{{ $hashtag['original']['title'] }}</a>
+          <div class="delete-button">
+            {!! Form::open(['method'=> 'DELETE', 'url'=>'/hashtags/'.$hashtag->id]) !!}
+              {!! Form::button('<i class="fa fa-trash-o"></i>', ['type' => 'submit']) !!}
+            {!! Form::close() !!}
+          </div>
         </div>
-        </div>
-
       @endforeach
-
       </div>
 
       </ul>
@@ -42,7 +40,7 @@
       @foreach($instagrams as $instagram)
         <div class="grid-item thumbnail">
             @if(isset($instagram["videos"]))
-              <video controls src="{{ $instagram["videos"]}}" class="vids">Your Browser does not support the video tag</video>
+              <video src="{{ $instagram["videos"]}}" class="vids" autoplay="autoplay" loop="loop" muted="muted">Your Browser does not support the video tag</video>
             @else
               <img class="pics" src = {{ $instagram["picture"] }} />
             @endif
@@ -53,6 +51,10 @@
               {{ $instagram["caption"] }}
             </div>
             {{ $instagram["likes_count"]}} likes
+            <p class="time-interval">
+             {{ $instagram["time_interval"]}} ago
+           </p>
+
         </div>
       @endforeach
     </div>

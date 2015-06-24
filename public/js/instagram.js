@@ -4,7 +4,7 @@ $( document ).ready(function() {
   var $hashtags = $('.hashtags');
   var $hashtagsCount = $hashtags.size();
   var $container = $('.instagram-feed');
-  var $time = 5000;
+  var $time = 2000;
 
   // initialize masonry on page load
   $container.imagesLoaded( function() {
@@ -17,9 +17,6 @@ $( document ).ready(function() {
   $('.hashtags').click(function(){
    $container = $('.instagram-feed');
    var input = $(this).text().slice(1);
-   $(".hashtagTitle").html("");
-   $(".hashtagTitle").append("#"+input);
-
    $.ajax({
    type: "GET",
    url: "/instagrams/" + input,
@@ -31,7 +28,11 @@ $( document ).ready(function() {
       $container.imagesLoaded(function(){
         $container.masonry({
           columnWidth: 10
-        })
+        });
+          $("html, body").animate({ scrollTop: $(document).height() }, 22500);
+          $('html, body').animate({scrollTop:0}, 1000);
+          $(".hashtagTitle").html("");
+          $(".hashtagTitle").append("#" + input);
       });
    });
   });
@@ -55,14 +56,11 @@ $( document ).ready(function() {
   // iterate through hashtags, click on each hashtag
   function clickHashtags(){
     $.each($hashtags, function(index, hashtag){
+    var htag = $(hashtag).text();
       setTimeout(function(){
         $(hashtag).trigger('click');
-        $("html, body").animate({ scrollTop: $(document).height() }, 21000);
-
-   $('html, body').animate({scrollTop:0}, 1000);
-
       }, $time)
-      $time += 25000;
+      $time += 24000;
     });
   }
 

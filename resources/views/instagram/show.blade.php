@@ -1,9 +1,7 @@
 @foreach($instagrams as $instagram)
   <div class="grid-item thumbnail">
       @if(isset($instagram["videos"]))
-        <video controls src="{{ $instagram["videos"]}}" class="vids">
-          Your Browser does not support the video tag
-        </video>
+         <video src="{{ $instagram["videos"]}}" class="vids" autoplay="autoplay" loop="loop" muted="muted">Your Browser does not support the video tag</video>
       @else
         <img class="pics" src = {{ $instagram["picture"] }} />
       @endif
@@ -18,6 +16,9 @@
         {{ $instagram["caption"] }}
       </div>
       {{ $instagram["likes_count"]}} likes
+      <p class="time-interval">
+       {{ $instagram["time_interval"]}} ago
+     </p>
   </div>
   
 @endforeach
