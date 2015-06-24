@@ -11,7 +11,6 @@ class InstagramAPI {
     $response = $client->get('/v1/tags/' . $hashtag . '/media/recent?access_token=' . getenv('INSTAGRAM_ACCESS_TOKEN'))->send();
 
     $instagrams = $response->json()["data"];
-
     foreach($instagrams as $instagram) {
       $array = [];
       if(isset($instagram["videos"])){
@@ -24,8 +23,18 @@ class InstagramAPI {
         $array["likes_count"] = $instagram["likes"]["count"];
         $array["caption"] = $instagram["caption"]["text"];
         $array["post_link"] = $instagram["link"];
+        $array["created_time"] = $instagram["created_time"];
+
+        // dd(date('m/d/Y', $instagram["created_time"]);
+        // $this->getDatePosted($instagram["created_time"]);
       array_push($final_instagrams, $array);
     }
     return $final_instagrams;
+  }
+
+  public function getDatePosted($date){
+    $timeNow = time();
+    $numDays = abs($date - $timeNow)/60/60/24;
+    dd($numDays);
   }
 }
