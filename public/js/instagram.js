@@ -52,65 +52,22 @@ $( document ).ready(function() {
     }
   });
 
-  // iterate through hashtags, click on each hashtag, infinite loop
-
+  // iterate through hashtags, click on each hashtag
   function clickHashtags(){
     $.each($hashtags, function(index, hashtag){
       setTimeout(function(){
         $(hashtag).trigger('click');
-        // $("html, body").animate({ scrollTop: $("document").height() }, 22000);
         $("html, body").animate({ scrollTop: $(document).height() }, 21000);
 
    $('html, body').animate({scrollTop:0}, 1000);
-
-// setInterval(function(){
-//      // 4000 - it will take 4 secound in total from the top of the page to the bottom
-// $("html, body").animate({ scrollTop: $(document).height() }, 4000);
-// setTimeout(function() {
-//    $('html, body').animate({scrollTop:0}, 4000);
-// },4000);
-
-// },8000);
 
       }, $time)
       $time += 25000;
     });
   }
 
-  // function infiniteLoop(){
-  //   setInterval(clickHashtags(), 10000);
-  // }
-
-  // function clickElement(element){
-  //   $(element).trigger('click').delay(5000);
-  // }
-
+  // infinite loop
   setInterval(function(){clickHashtags();}, 1000);
-
-
-  // $('#hashtag-input').keypress(function (e) {
-  //  var key = e.which;
-  //  if(key == 13)  // the enter key code
-  //   {
-  //     event.preventDefault();
-  //     var hashtag = $("#hashtag-input").val();
-  //
-  //     $.ajax({
-  //     type: "GET",
-  //     url: "/instagrams/" + hashtag,
-  //     dataType: "html",
-  //       success: function(data) {
-  //        $container.html(data).masonry('destroy')
-  //       }
-  //     }).done(function(){
-  //        $container.imagesLoaded(function(){
-  //          $container.masonry({
-  //            columnWidth: 10
-  //          })
-  //        });
-  //     });
-  //   }
-  // });
 
 
 });
