@@ -15,7 +15,7 @@ class TwitterAPI {
 
     $client->addSubscriber($auth);
 
-    $response = $client->get('search/tweets.json?q=@dosomething&result_type=popular')->send();
+    $response = $client->get('search/tweets.json?q=dosomething&result_type=popular')->send();
 
     $tweets = $response->json()['statuses'];
 

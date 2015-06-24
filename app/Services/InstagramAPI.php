@@ -32,6 +32,7 @@ class InstagramAPI {
   public function timerFormat($start_time, $end_time, $std_format = false) {
    $total_time = $end_time - $start_time;
    $days       = floor($total_time /86400);
+   $hours      = floor($total_time /3600);  
    $results = "";
    if($std_format == false)
    {

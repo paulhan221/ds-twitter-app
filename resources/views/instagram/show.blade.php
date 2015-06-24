@@ -17,8 +17,8 @@
       </div>
       {{ $instagram["likes_count"]}} likes
       <p class="time-interval">
-       {{ $instagram["time_interval"]}} ago
+       {{ $instagram["time_interval"]}}
      </p>
   </div>
-  
+
 @endforeach
